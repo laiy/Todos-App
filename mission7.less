@@ -1,0 +1,127 @@
+body {
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    color: #333;
+    background: #EEE;
+    width: 520px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    div.todos {
+        background: #FFF;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+        border-radius: 0 0 5px 5px;
+        margin-bottom: 40px;
+        div.header {
+            h1 {
+                display: block;
+                font-weight: bold;
+                text-align: center;
+                padding: 0 0 10px 0;
+                font-size: 36px;
+            }
+            input {
+                width: 480px;
+                font-size: 24px;
+                outline: none;
+                padding: 6px;
+                border: 1px solid #999999;
+                box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+                font-style: italic;
+                line-height: 1.4em;
+            }
+        }
+        section {
+            display: none;
+            input[type = "checkbox"] {
+                margin: 3px 3px 3px 4px;
+                box-sizing: border-box;
+            }
+            ul {
+                margin: 10px 0;
+                padding: 0;
+                list-style: none;
+                li {
+                    position: relative;
+                    padding: 18px 20px 18px 0;
+                    font-size: 24px;
+                    border-bottom: 1px solid #CCC;
+                    div.view {
+                        label {
+                            word-break: break-word;
+                        }
+                        a.destroy {
+                            position: absolute;
+                            right: 5px;
+                            top: 20px;
+                            display: none;
+                            cursor: pointer;
+                            width: 20px;
+                            height: 20px;
+                            background: url(destroy.png) no-repeat;
+                        }
+                        a:hover {
+                            background-position: 0 -20px;
+                        }
+                    }
+                }
+                li:hover {
+                    div.view {
+                        a.destroy {
+                            display: block;
+                        }
+                    }
+                }
+                li:last-child {
+                    border: none;
+                }
+            }
+        }
+        footer {
+            display: none;
+            margin: 0 -20px -20px -20px;
+            overflow: hidden;
+            color: #555;
+            background: #F4FCE8;
+            border-top: 1px solid #EDEDED;
+            padding: 0 20px;
+            line-height: 37px;
+            border-radius: 0 0 5px 5px;
+            a {
+                display: none;
+                float: right;
+                line-height: 20px;
+                text-decoration: none;
+                background: rgba(0, 0, 0, 0.1);
+                color: #555;
+                font-size:11px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                padding: 0 10px 1px;
+                cursor: pointer;
+                border-radius: 12px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+            }
+            a:hover {
+                box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+                background: rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+    #instructions {
+        margin: 10px auto;
+        color: #777;
+        text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+        text-align: center;
+    }
+    #credits {
+        margin: 30px auto;
+        color: #999;
+        text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+        text-align: center;
+        a {
+            color: #888;
+        }
+    }
+}
