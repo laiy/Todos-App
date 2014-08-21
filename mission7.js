@@ -85,6 +85,15 @@ function addTodos() {
 }
 
 function deleteTodosByClick() {
+    var a = document.getElementsByTagName('a');
+    var index;
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] == this) {
+            index = i;
+            break;
+        }
+    }
+    items.splice(index, 1);
     this.parentNode.parentNode.remove();
     todosCount--;
     if (!todosCount) {
@@ -159,6 +168,7 @@ function deleteTodosByCheckboxs() {
         if (checkBox[i].checked) {
             checkBox[i].parentNode.parentNode.remove();
             todosCount--;
+            items.splice(i, 1);
             i--;
         }
     }
